@@ -15,7 +15,7 @@ export const useUtils = () => {
 };
 
 export function UtilsProvider({ children }) {
-  const socket = io('ws://localhost:5000');
+  const socket = io(process.env.NEXT_PUBLIC_WEB_SOCKET_URL);
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
